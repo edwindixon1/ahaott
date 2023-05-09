@@ -13,41 +13,57 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Aha_OTT {
-	String browserName;
+//	String browserName;
 	public static WebDriver driver;
-	Aha_OTT aha;
-	public  Aha_OTT(String browserName) {
-  	  this.browserName = browserName;
-
-  	  if (browserName.equalsIgnoreCase("chrome"))
-  	   driver = new ChromeDriver();
-
-  	  if (browserName.equalsIgnoreCase("firefox"))
-  	   driver = new FirefoxDriver();
-
-  	  if (browserName.equalsIgnoreCase("edge"))
-  	   driver = new EdgeDriver();
-
-  	}
-	 @BeforeClass
-	 public void setUp() {
-	  String browserName = getParameter("browser");
-	  this.aha = new Aha_OTT(browserName);
-	 }
-  
-    private String getParameter(String name) {
-	  String value = System.getProperty(name);
-	  if (value == null)
-	     throw new RuntimeException(name + " is not a parameter!");
-
-	  if (value.isEmpty())
-	    throw new RuntimeException(name + " is empty!");
-
-	  return value;
-	 }
+//	Aha_OTT aha;
+//	public  Aha_OTT(String browserName) {
+//  	  this.browserName = browserName;
+//
+//  	  if (browserName.equalsIgnoreCase("chrome"))
+//  	   driver = new ChromeDriver();
+//
+//  	  if (browserName.equalsIgnoreCase("firefox"))
+//  	   driver = new FirefoxDriver();
+//
+//  	  if (browserName.equalsIgnoreCase("edge"))
+//  	   driver = new EdgeDriver();
+//
+//  	}
+//	 @BeforeClass
+//	 public void setUp() {
+//	  String browserName = getParameter("browser");
+//	  this.aha = new Aha_OTT(browserName);
+//	 }
+//  
+//    private String getParameter(String name) {
+//	  String value = System.getProperty(name);
+//	  if (value == null)
+//	     throw new RuntimeException(name + " is not a parameter!");
+//
+//	  if (value.isEmpty())
+//	    throw new RuntimeException(name + " is empty!");
+//
+//	  return value;
+//	 }
+	
+	@BeforeTest
+	public void launchbrowser()
+	{
+		String browser = System.getProperty("BROWSER");
+		
+		if (browser.equalsIgnoreCase("chrome"))
+	  	   driver = new ChromeDriver();
+	
+		else if (browser.equalsIgnoreCase("firefox"))
+	  	   driver = new FirefoxDriver();
+	
+		else if (browser.equalsIgnoreCase("edge"))
+	  	   driver = new EdgeDriver();
+	}
 	
     @Test
 	public void ahaott() throws InterruptedException  
