@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -18,7 +19,7 @@ import org.testng.annotations.Test;
 
 public class Aha_OTT {
 //	String browserName;
-	public static WebDriver driver;
+	 public static WebDriver driver;
 //	Aha_OTT aha;
 //	public  Aha_OTT(String browserName) {
 //  	  this.browserName = browserName;
@@ -51,25 +52,32 @@ public class Aha_OTT {
 //	 }
 	
 	@BeforeTest
-	public void launchbrowser()
+	public void launchbrowser() 
 	{
+		
 		String browser = System.getProperty("BROWSER");
 		
 		if (browser.equalsIgnoreCase("chrome"))
-	  	   driver = new ChromeDriver();
+		{
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+	  	   driver = new ChromeDriver(options);
+		}
 	
 		else if (browser.equalsIgnoreCase("firefox"))
 	  	   driver = new FirefoxDriver();
 	
 		else if (browser.equalsIgnoreCase("edge"))
 	  	   driver = new EdgeDriver();
+		
+		
 	}
 	
     @Test
 	public void ahaott() throws InterruptedException  
 	{
 
-    
+    	
 		// TODO Auto-generated method stub
     	driver.get("https://www.aha.video/release/new-tamil-movies");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
@@ -95,8 +103,8 @@ public class Aha_OTT {
 	 driver.findElement(By.xpath("//span[@class='icon icon-play ng-star-inserted']")).click();
 	 driver.findElement(By.xpath("//button[@class='button-center ng-star-inserted'][2]")).click();
 	 driver.findElement(By.xpath("//i[.='fullscreen_exit']")).click();	 
-
-		this.driver.quit();
+	 driver.close();
+	 
 	}
 
 }
