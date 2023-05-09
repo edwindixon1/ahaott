@@ -5,7 +5,7 @@
     <classes>
       <class name="Ahaott.Aha_OTT">
         <methods>
-          <include name="setUp"/>
+          <include name="launchbrowser"/>
           <include name="ahaott"/>
         </methods>
       </class> <!-- Ahaott.Aha_OTT -->

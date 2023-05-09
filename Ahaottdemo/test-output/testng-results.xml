@@ -2,20 +2,34 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-08T22:01:15 IST" name="Default suite" finished-at="2023-05-08T22:01:15 IST" duration-ms="72">
+  <suite started-at="2023-05-09T13:14:30 IST" name="Default suite" finished-at="2023-05-09T13:14:34 IST" duration-ms="3398">
     <groups>
     </groups>
-    <test started-at="2023-05-08T22:01:15 IST" name="Default test" finished-at="2023-05-08T22:01:15 IST" duration-ms="72">
+    <test started-at="2023-05-09T13:14:30 IST" name="Default test" finished-at="2023-05-09T13:14:34 IST" duration-ms="3398">
       <class name="Ahaott.Aha_OTT">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Ahaott.Aha_OTT@5ab956d7]" started-at="2023-05-08T22:01:15 IST" name="setUp" finished-at="2023-05-08T22:01:15 IST" duration-ms="13" status="FAIL">
-          <exception class="java.lang.RuntimeException">
+        <test-method is-config="true" signature="launchbrowser()[pri:0, instance:Ahaott.Aha_OTT@2e385cce]" started-at="2023-05-09T13:14:30 IST" name="launchbrowser" finished-at="2023-05-09T13:14:33 IST" duration-ms="3332" status="FAIL">
+          <exception class="org.openqa.selenium.remote.http.ConnectionFailedException">
             <message>
-              <![CDATA[browser is not a parameter!]]>
+              <![CDATA[Unable to establish websocket connection to http://localhost:49229/devtools/browser/89f519ea-c1d6-4b0c-b7a1-ae9c18aa933a
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: ChromeDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: browser is not a parameter!
-at Ahaott.Aha_OTT.getParameter(Aha_OTT.java:44)
-at Ahaott.Aha_OTT.setUp(Aha_OTT.java:37)
+              <![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:49229/devtools/browser/89f519ea-c1d6-4b0c-b7a1-ae9c18aa933a
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
+at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+at java.base/java.util.Optional.map(Optional.java:260)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:50)
+at Ahaott.Aha_OTT.launchbrowser(Aha_OTT.java:68)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -24,11 +38,9 @@ at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvoca
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
 at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
 at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:643)
+at org.testng.TestRunner.beforeRun(TestRunner.java:632)
+at org.testng.TestRunner.run(TestRunner.java:594)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
 at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
 at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
@@ -44,19 +56,33 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- org.openqa.selenium.remote.http.ConnectionFailedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="ahaott()[pri:0, instance:Ahaott.Aha_OTT@5ab956d7]" started-at="2023-05-08T22:01:15 IST" name="ahaott" finished-at="2023-05-08T22:01:15 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.RuntimeException">
+        </test-method> <!-- launchbrowser -->
+        <test-method signature="ahaott()[pri:0, instance:Ahaott.Aha_OTT@2e385cce]" started-at="2023-05-09T13:14:34 IST" name="ahaott" finished-at="2023-05-09T13:14:34 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.remote.http.ConnectionFailedException">
             <message>
-              <![CDATA[browser is not a parameter!]]>
+              <![CDATA[Unable to establish websocket connection to http://localhost:49229/devtools/browser/89f519ea-c1d6-4b0c-b7a1-ae9c18aa933a
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: ChromeDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: browser is not a parameter!
-at Ahaott.Aha_OTT.getParameter(Aha_OTT.java:44)
-at Ahaott.Aha_OTT.setUp(Aha_OTT.java:37)
+              <![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:49229/devtools/browser/89f519ea-c1d6-4b0c-b7a1-ae9c18aa933a
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
+at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+at java.base/java.util.Optional.map(Optional.java:260)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:50)
+at Ahaott.Aha_OTT.launchbrowser(Aha_OTT.java:68)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -65,11 +91,9 @@ at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvoca
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
 at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
 at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:643)
+at org.testng.TestRunner.beforeRun(TestRunner.java:632)
+at org.testng.TestRunner.run(TestRunner.java:594)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
 at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
 at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
@@ -85,7 +109,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- org.openqa.selenium.remote.http.ConnectionFailedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ahaott -->
